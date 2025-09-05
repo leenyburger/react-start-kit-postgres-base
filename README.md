@@ -1,3 +1,9 @@
+# This is the Inertia Rails React Start Kit with Postgres. 
+# Start all new React + Inertia + Rails application by cloning this template
+
+
+Details below 👇
+
 # Inertia Rails React Starter Kit
 
 A modern full-stack starter application with Rails backend and React frontend using Inertia.js based on the [Laravel Starter Kit](https://github.com/laravel/react-starter-kit).
