@@ -1,78 +1,57 @@
-# This is the Inertia Rails React Start Kit with Postgres. 
-# Start all new React + Inertia + Rails application by cloning this template
+# AdWizard
 
+AdWizard helps small businesses create Google Ads from a simple, Typeform-like questionnaire.  
+The goal is to remove the overwhelm of Google Ads setup and make campaign creation accessible, fast, and intuitive.
 
-Details below 👇
+## 🚀 Mission Statement
 
-# Inertia Rails React Starter Kit
+AdWizard creates and sets up Google Ads from a short series of basic questions.  
+The user provides their website, what they sell, who they sell to, their budget, and their goal — and AdWizard generates a complete Google Ads bundle ready to upload.
 
-A modern full-stack starter application with Rails backend and React frontend using Inertia.js based on the [Laravel Starter Kit](https://github.com/laravel/react-starter-kit).
+In 30 seconds, a non-technical business owner can go from “I know nothing about Google Ads” to having a launch-ready ad campaign.
 
-## Features
+## ✨ MVP Scope
 
-- [Inertia Rails](https://inertia-rails.dev) & [Vite Rails](https://vite-ruby.netlify.app) setup
-- [React](https://react.dev) frontend with TypeScript & [shadcn/ui](https://ui.shadcn.com) component library
-- User authentication system (based on [Authentication Zero](https://github.com/lazaronixon/authentication-zero))
-- [Kamal](https://kamal-deploy.org/) for deployment
-- Optional SSR support
+**Input:**  
+A simple form that collects:
+- Website URL  
+- What the business sells  
+- Target audience  
+- Daily/Monthly budget  
+- Campaign goal (traffic, leads, sales)
 
-See also:
-- [Svelte Starter Kit](https://github.com/inertia-rails/svelte-starter-kit) for Inertia Rails with Svelte
-- [Vue Starter Kit](https://github.com/inertia-rails/vue-starter-kit) for Inertia Rails with Vue
+**Output:**  
+AdWizard generates:
+- ~10 recommended headlines  
+- ~4 descriptions  
+- Keyword list  
+- Suggested ad extensions  
+- Practical bidding/budget suggestions  
+- A downloadable CSV formatted for Google Ads Editor
 
-<a href="https://evilmartians.com/?utm_source=inertia-rails-react-starter-kit&utm_campaign=project_page">
-<img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Built by Evil Martians" width="236" height="54">
-</a>
+**What’s NOT included in MVP:**
+- Authentication / user accounts  
+- Saved projects  
+- Stripe / billing  
+- Full Google Ads API integration  
+- Analytics or performance tracking
 
-## Setup
+The focus is on a **single flow**:  
+Form → LLM → Ad bundle → CSV download.
 
-1. Clone this repository
-2. Setup dependencies & run the server:
-   ```bash
-   bin/setup
-   ```
-3. Open http://localhost:3000
+## 🛠 Tech Stack (Planned)
 
-## Enabling SSR
+- Ruby on Rails  
+- TailwindCSS (optional but likely)  
+- OpenAI / Anthropic for generation  
+- Simple service object architecture  
+- CSV builder for Google Ads Editor output
 
-This starter kit comes with optional SSR support. To enable it, follow these steps:
+## 🔮 Future Ideas (Post-MVP)
 
-1. Open `app/frontend/entrypoints/inertia.ts` and uncomment part of the `setup` function:
-   ```ts
-   // Uncomment the following to enable SSR hydration:
-   // if (el.hasChildNodes()) {
-   //   hydrateRoot(el, createElement(App, props))
-   //   return
-   // }
-   ```
-2. Open `config/deploy.yml` and uncomment several lines:
-   ```yml
-   servers:
-     # Uncomment to enable SSR:
-     # vite_ssr:
-     #   hosts:
-     #     - 192.168.0.1
-     #   cmd: bundle exec vite ssr
-     #   options:
-     #     network-alias: vite_ssr
-      
-   # ...
-      
-   env:
-     clear:
-       # Uncomment to enable SSR:
-       # INERTIA_SSR_ENABLED: true
-       # INERTIA_SSR_URL: "http://vite_ssr:13714"
-      
-   # ...
-      
-   builder:
-     # Uncomment to enable SSR:
-     # dockerfile: Dockerfile-ssr
-   ```
-   
-That's it! Now you can deploy your app with SSR support.
-
-## License
-
-The project is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+- Save project history  
+- Export as full Google Ads API payload  
+- Competitor URL analysis  
+- Multi-campaign bundles  
+- Login + subscription model  
+- Ready-to-publish Google Ads API integration
