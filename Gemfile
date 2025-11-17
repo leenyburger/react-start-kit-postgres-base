@@ -64,6 +64,9 @@ group :development, :test do
 
   # Fixtures replacement with a straightforward definition syntax
   gem "factory_bot_rails"
+
+  # Load environment variables from .env files
+  gem "dotenv-rails"
 end
 
 group :development do
