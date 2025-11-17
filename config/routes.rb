@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get :dashboard, to: "dashboard#index"
 
   resources :ad_generations, only: [:new, :create]
+  post "ad_generations/push_to_google", to: "ad_generations#push_to_google"
 
   namespace :settings do
     resource :profile, only: [:show, :update]
